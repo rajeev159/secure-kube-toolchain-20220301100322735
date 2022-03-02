@@ -62,7 +62,7 @@ spec:
       default: "true"
     - name: commons-hosted-region
       default: "https://raw.githubusercontent.com/open-toolchain/commons/master"
-    - name: IBM_CLOUD_API
+    - name: ibm-cloud-api
       description: IBM CLOUD API
     - name: apikey
       description: api key
@@ -172,7 +172,7 @@ spec:
         - name: API_KEY
           value: $(params.apikey)
         - name: IBM_CLOUD_APII
-          value: $(params.IBM_CLOUD_API)
+          value: $(params.ibm-cloud-api)
         - name: REGION
           value: $(params.dev-region)
 
