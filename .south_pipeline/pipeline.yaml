@@ -165,6 +165,13 @@ spec:
       taskRef:
         name: tester-run-tests
       params:
+        - name: API_KEY
+          value: $(params.apikey)
+        - name: IBM_CLOUD_API
+          value: $(params.IBM_CLOUD_API)
+        - name: REGION
+          value: $(params.dev-region)
+
         - name: tests-script
           value: |
             if [ -f ./test/run-tests.sh ]; then
@@ -181,6 +188,7 @@ spec:
             ibmcloud plugin install schematics
             ibmcloud plugin list
 
+            ibmcloud login --apikey $API_KEY -a "$IBM_CLOUD_API" $REGION
 
             #echo "Executing with changed path............"
             #./scripts/poc.sh
