@@ -175,7 +175,7 @@ spec:
               echo "Test runner script not found: ./test/run-tests.sh"
             fi
 
-           # Install schematic cli
+            # Install schematic cli
             echo "Install schematic CLI"
             set -x
             ibmcloud plugin install schematics
