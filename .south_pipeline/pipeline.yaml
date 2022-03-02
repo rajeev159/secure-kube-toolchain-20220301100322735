@@ -175,10 +175,15 @@ spec:
               echo "Test runner script not found: ./test/run-tests.sh"
             fi
 
-            echo "Execusting custom script............"
-            source ./scripts/poc.sh
-            echo "Executing with changed path............"
-            ./scripts/poc.sh
+           # Install schematic cli
+            echo "Install schematic CLI"
+            set -x
+            ibmcloud plugin install schematics
+            ibmcloud plugin list
+
+
+            #echo "Executing with changed path............"
+            #./scripts/poc.sh
       workspaces:
         - name: artifacts
           workspace: pipeline-ws
