@@ -62,6 +62,10 @@ spec:
       default: "true"
     - name: commons-hosted-region
       default: "https://raw.githubusercontent.com/open-toolchain/commons/master"
+    - name: IBM_CLOUD_API
+      description: IBM CLOUD API
+    - name: apikey
+      description: api key
   workspaces:
     - name: pipeline-ws
   tasks:
