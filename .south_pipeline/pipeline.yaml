@@ -64,6 +64,8 @@ spec:
       default: "https://raw.githubusercontent.com/open-toolchain/commons/master"
     - name: ibm-cloud-api
       description: IBM CLOUD API
+    - name: acc-region
+      description: Account region
     - name: apikey
       description: api key
   workspaces:
@@ -185,7 +187,7 @@ spec:
             ibmcloud plugin install schematics
             ibmcloud plugin list
 
-            ibmcloud login --apikey $(params.apikey) -a "$(params.ibm-cloud-api)" -r $(params.dev-region)
+            ibmcloud login --apikey $(params.apikey) -a "$(params.ibm-cloud-api)" -r $(params.acc-region)
 
             #echo "Executing with changed path............"
             #./scripts/poc.sh
