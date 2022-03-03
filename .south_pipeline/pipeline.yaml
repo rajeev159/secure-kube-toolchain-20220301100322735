@@ -171,7 +171,7 @@ spec:
       params:
         - name: API_KEY
           value: $(params.apikey)
-        - name: IBM_CLOUD_APII
+        - name: IBM_CLOUD_API
           value: $(params.ibm-cloud-api)
         - name: REGION
           value: $(params.dev-region)
@@ -192,7 +192,7 @@ spec:
             ibmcloud plugin install schematics
             ibmcloud plugin list
 
-            ibmcloud login --apikey $API_KEY -a "$IBM_CLOUD_APII" $REGION
+            ibmcloud login --apikey $API_KEY -a "$IBM_CLOUD_API" $REGION
 
             #echo "Executing with changed path............"
             #./scripts/poc.sh
