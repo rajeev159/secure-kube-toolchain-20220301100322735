@@ -127,6 +127,8 @@ spec:
             value: $(params.apikey)
           - name: ibm-cloud-api
             value: $(params.ibm-cloud-api)
+          - name: acc-region
+            value: $(params.acc-region)
           - name: pr-url
             value: $(params.pr-url)
           - name: commit-timestamp
