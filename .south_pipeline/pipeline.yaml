@@ -185,7 +185,7 @@ spec:
             ibmcloud plugin install schematics
             ibmcloud plugin list
 
-            ibmcloud login --apikey $(params.apikey) -a "$(params.ibm-cloud-api)" $(params.dev-region)
+            ibmcloud login --apikey $(params.apikey) -a "$(params.ibm-cloud-api)" -r $(params.dev-region)
 
             #echo "Executing with changed path............"
             #./scripts/poc.sh
